@@ -1,3 +1,4 @@
+/* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Wendy+One&display=swap');
 
 /* font-family: 'Rajdhani', sans-serif;
@@ -20,8 +21,6 @@ body {
 
 .container {
     display: flex;
-    /* flex-direction: row; */
-    /* height: 80%; */
     width: 90vw;
 }
 
@@ -31,11 +30,17 @@ body {
     background-repeat: no-repeat;
     height: 80vh;
     border-radius: 30px;
+
+    /* position h3 to the end of each card */
     display: flex;
     align-items: end;
+
     flex: 0.5;
     margin: 1vw;
+
+    /* hide overflowed h3,make sure each inactive card have the same width */
     overflow: hidden;
+
     cursor: pointer;
     transition: flex ease-in-out 1s;
     /* -webkit-transition: all 700ms ease-in; */
@@ -50,6 +55,7 @@ body {
     transition: opacity ease-out 1.3s;
 }
 
+/* expand card */
 .panel.active {
     flex: 5;
 }
@@ -65,6 +71,7 @@ body {
         height: 100vh;
     }
     .panel.active {
-        flex-grow: 1;
+        /* flex-grow: 1; */
+        flex: 1;
     }
 }
