@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    /* 透明色 */
+    background-color: transparent;
+    border: none;
+}
+
+
+body {
+    background-color: gray;
+    /* 防止横向滚动条出现 */
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: skyblue;
+    transform-origin: top left;
+    width: 100vw;
+    min-height: 120vh;
+    padding: 50px;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.container.show-nav .circle-container {
+    /* 加起来旋转90度 */
+    transform: rotate(-70deg);
+}
+
+.circle-container {
+    background-color: hotpink;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    transition: transform 0.5s linear;
+}
+
+#open, #close {
+    position: absolute;
+    font-size: 40px;
+    color: gray;
+    top: 110px;
+}
+
+#open {
+    left: 120px;
+}
+
+#close {
+    left: 45px;
+    /* transform: rotate(45deg); */
+}
+
+.content {
+    margin: 50px;
+    max-width: 1000px;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+nav ul li {
+    transform: translateX(-100%);
+    text-transform: uppercase;
+    transition: transform 0.5s linear;
+    margin-left: 15px;
+}
+
+/* 一个sibling */
+nav ul li + li {
+    margin-left: 30px;
+    transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+    margin-left: 45px;
+    transform: translateX(-200%);
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    /* delay是动画效果的一部分 */
+    transition-delay: 0.3s;
+  }
