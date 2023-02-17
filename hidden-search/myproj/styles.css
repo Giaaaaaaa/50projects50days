@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+}
+input, button {
+    /* border：none；也可以 */
+    border: 0;
+}
+
+/* 去除focus时outline的默认效果 */
+input:focus, button:focus {
+    outline: none;
+}
+.search {
+    position: fixed;
+    top: 100px;
+}
+
+.search .input {
+    min-height: 50px;
+    font-size: 20px;
+    width: 50px;
+    transition: width 0.5s ease;
+    text-indent: 10px;
+}
+
+.search .btn {
+    min-height: 50px;
+    width: 50px;
+
+    /* 绝对定位后，btn和input之间的小缝隙就消失了 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: left 0.5s ease;
+}
+
+.search.active .btn {
+    left: 200px;
+}
+
+.search.active .input {
+    width: 200px;
+}
