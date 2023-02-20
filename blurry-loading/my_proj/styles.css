@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Wendy+One&display=swap');
+
+
+/* 
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Wendy One', sans-serif;
+*/
+
+body {
+    /* background-color: pink; */
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loading {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 100px;
+}
+
+.bg {
+    background-image: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100vw + 60px);
+    min-height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
