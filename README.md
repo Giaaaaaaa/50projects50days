@@ -1,4 +1,5 @@
 # 50 Projects in 50 Days - HTML/CSS and JavaScript
+# You will find my projects in each individual project's folder
 
 This is the main repository for all of the projects in the course.
 
