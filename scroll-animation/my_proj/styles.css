@@ -1,0 +1,35 @@
+:root {
+    --blue: #91aac3;
+    --white: #ffffff;
+  }
+
+body {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    width: 400px;
+    height: 200px;
+    background: var(--white);
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(400%);
+    transition: transform ease 0.5s;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+
