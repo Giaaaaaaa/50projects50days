@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-:root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --darkblue: #1a0fab00;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -30,15 +24,18 @@ form {
 }
 
 input {
-    outline: none;
-    border: none;
-    border-bottom: 1px solid lightblue;
+    border: 0;
+    border-bottom: 3px solid lightblue;
     background: transparent;
     color: #fff;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
 }
 
-input:focus,
-input:valid {
+.form-control input:focus,
+.form-control input:valid {
     outline: 0;
     caret-color: lightblue;
 }
@@ -52,7 +49,9 @@ button {
     border: none;
     color: aliceblue;
     font-size: 20px;
+    cursor: pointer;
 }
+
 
 button:active {
     transform: scale(0.98);
@@ -88,8 +87,8 @@ button:focus {
 
 .form-control label {
     position: relative;
-    top: -25px;
-    cursor:auto;
+    transform: translateY(-30px);
+    /* pointer-events: none; */
 }
 
 .form-control label span {
@@ -99,8 +98,17 @@ button:focus {
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.form-control input:focus + label span
+.form-control input:focus+label span
 {
-    transform: translateY(-25px);
-    color: steelblue;
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+.form-control .stay-up {
+    color: lightblue;
+    top: -30px;
+}
+
+.form-control label.stay-up span {
+    -webkit-transition: none;
 }
