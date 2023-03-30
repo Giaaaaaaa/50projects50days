@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F5EB;
+}
+
+.btn {
+    display: block;
+    border: 0;
+    background: #002B5B;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 28px;
+    margin: 100px;
+}
+
+img {
+    border: 1px solid black;
+    width: 500px;
+    object-fit:cover;
+}
